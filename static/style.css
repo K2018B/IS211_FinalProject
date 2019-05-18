@@ -1,0 +1,80 @@
+.h2ver2 {
+    color: #8a8a5c;
+    font-size: 30px;
+
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.thver1 {
+	font-size: 100%;
+	font-family: courier;
+	
+}
+
+td, th {
+	border: 1px solid black;    
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.button-container form,
+.button-container form div {
+    display: inline;
+}
+
+input[type=text], input[type=password], input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.logoffbtn {
+	width: auto;
+	padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.redirectbtn {
+	width: auto;
+	padding: 10px 18px;
+    background-color: #4CAF50;	
+}
+
+.container {
+    padding: 16px;
+}
+
+select {
+    padding: 16px;
+	font-size: 15px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}

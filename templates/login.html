@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <h2 class="h2ver2">Book Catalogue Login</h2>
+</head>
+
+<body>
+
+<form action="/login" method ="post">
+
+  <div class="container">
+    <label class="h2ver2"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label class="h2ver2"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+  </div>
+</form>
+
+<p class="h2ver2" style="color:#FF0000"> {{error}}</p>
+
+</body>
+</html>

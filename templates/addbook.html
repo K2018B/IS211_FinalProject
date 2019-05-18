@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <h2 class="h2ver2">Welcome To Your Book Selection {{username}}</h2>
+</head>
+
+<body>
+<div class="button-container">
+<form action="/dropsession"> 
+<div>
+	<button class ="logoffbtn" type="submit">Log Off</button>
+</div>
+</form>
+<form action="/dashboard/{{userid}}"> 
+<div>
+	<button class ="redirectbtn" type="submit">My Book Catalogue</button>
+</div>
+</form>
+</div>
+
+<form action="" method ="post">
+
+  <div class="container">
+    <label class="h2ver2"><b>Enter An ISBN </b></label>
+    <input type="text" placeholder="Example: 9780545010221" name="isbn" class = "inputver1" required>
+        
+    <button type="submit" name = "btn" value = "lookup">Add Book</button>
+  </div>
+</form>
+
+<p class="h2ver2" style="color:#FF0000">{{lookuperror}}</p>
+</body>
+</html>

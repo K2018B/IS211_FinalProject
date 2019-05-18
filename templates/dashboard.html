@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <h2 class="h2ver2">Welcome To Your Book Catalogue {{user_loggedin}}</h2>
+</head>
+
+<body>
+<div class="button-container">
+<form action="/dropsession"> 
+<div>
+	<button class ="logoffbtn" type="submit">Log Off</button>
+</div>
+</form>
+
+<form action="/book/add/{{user_lookup}}/{{user_loggedin}}"> 
+<div>
+	<button class ="redirectbtn" type="submit">Add Books</button>
+</div>
+</form>
+</div>
+
+<h2 class="h2ver2"> Books </h2>
+<table name = "books" border = "2" bgcolor = "#e5e5ff">
+<tr>
+	<th>Cover</th><th>Title</th><th>Author</th><th>Page Count</th><th>Rating</th><th>Remove Book?</th>
+</tr>
+	{% for book_data in book_data_all %}
+<tr>
+	<th class = "thver1"> <img src = {{book_data[13]}}></th><th class = "thver1">{{book_data[9]}}</th><th class = "thver1">{{book_data[10]}}</th><th class = "thver1">{{book_data[11]}}</th>
+	<th class = "thver1">{{book_data[12]}}</th><th class = "thver1"><a href = "/deletebook/{{book_data[0]}}/{{book_data[1]}}">Remove</a></th>
+	{% endfor %}
+</tr>
+</table>
+
+<p class="h2ver2" style="color:#ff5733"> {{no_books_msg}}</p>
+<p class="h2ver2" style="color:#FF0000"> {{error}}</p>
+</body>
+</html>
